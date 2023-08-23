@@ -12,13 +12,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 
 @Composable
 fun WaterCounter(modifier: Modifier = Modifier){
     Column(modifier = modifier.padding(16.dp)) {
         //val count:MutableState<Int> = remember{mutableStateOf(0) }
-        var count by remember { mutableStateOf(0) }
+        var count by rememberSaveable { mutableStateOf(0) }
         if(count > 0){
             var showTask by remember {
                 mutableStateOf(true)
