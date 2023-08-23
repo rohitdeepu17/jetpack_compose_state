@@ -25,7 +25,7 @@ fun WaterCounter(modifier: Modifier = Modifier){
                 mutableStateOf(true)
             }
             if(showTask){
-                WellnessTaskItem(taskName = "Have you taken 15 mins walk?", onClose = { showTask = false })
+                //WellnessTaskItem(taskName = "Have you taken 15 mins walk?", onClose = { showTask = false })
             }
             Text("You've had ${count} glasses.")
         }
